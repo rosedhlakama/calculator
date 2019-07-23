@@ -14,20 +14,25 @@ font-family: 'PT Serif', serif;
 }
 #heading{
     align-content: center;
+   text-align: center;
     margin: auto;
     color: #DFDCE3;
     text-transform: uppercase;
     font-size: 20px;
+
 }
 
 /* grid set-up */
 #gridCalculator{
 display: grid;
-width: 200px;
-height: 310px;
-grid-template-columns: [c0]50px [c1]50px [c2]50px [c3]50px [cend];
-grid-template-rows: [r0]25px [r1]25px [r2]25px [r3]25px [r4]25px [r5]25px 
-                    [r6]25px [r7]25px [r8]25px [r9]25px  [r10]25px [r11]25px 
+width: 300px;
+height: 450px;
+margin: auto;
+align-content: center;
+justify-content: center;
+grid-template-columns: [c0]75px [c1]75px [c2]75px [c3]75px [cend];
+grid-template-rows: [r0]35px [r1]35px [r2]35px [r3]35px [r4]35px [r5]35px 
+                    [r6]35px [r7]35px [r8]35px [r9]35px  [r10]35px [r11]35px 
                     [rend]; 
 grid-template-areas: 
    "display display display display"
@@ -41,63 +46,137 @@ grid-template-areas:
     "one two three equals"
     "one two three equals"
     "zero zero decimal equals"
-    "zero zero decimal equals"
+    "zero zero decimal equals";
+grid-column-gap: 1px;
+grid-row-gap: 1.5px;
+border: solid 0.5px #DFDCE3;
+padding:5px;
+
 }
 
 #display{
     grid-area: display;
+    width: 280px;
+    height: 70px;
+    background-color: fresh #4ABDAC;    
+    align-self: center;
+    margin: auto;
+}
+#entry{
+    border-bottom: dashed 1px rgb(73, 207, 187);
+    text-align: right;
+    height: 35px;
+    margin: 0;
+}
+#answer{
+    text-align: right;
+    height: 30px;
+    margin: 0 0 0 0;
+    border-bottom: dashed 1px rgb(73, 207, 187);
 }
 #allClear{
-    grid-area:allClear
+    grid-area:allClear;
+    width: 70px;
+    height: 70px;
+   
 }
 #delete{
-    grid-area:delete;
+    grid-area:Delete;
+    width: 70px;
+    height: 70px;
+   
 }
 #division{
     grid-area:division;
+    width: 70px;
+    height: 70px;
+    
 }
 #multiply{
     grid-area: multiply;
+    width: 70px;
+    height: 70px;
 }
 #seven{
     grid-area: seven;
+    width: 70px;
+    height: 70px;
 }
 #eight{
     grid-area: eight;
+    width: 70px;
+    height: 70px;
 }
 #nine{
     grid-area: nine;
+    width: 70px;
+    height: 70px;
 }
 #subtract{
     grid-area: subtract;
+    width: 70px;
+    height: 70px;
 }
 #four{
     grid-area: four;
+    width: 70px;
+    height: 70px;
 }
 #five{
     grid-area: five;
+    width: 70px;
+    height: 70px;
 }
 #six{
     grid-area: six;
+    width: 70px;
+    height: 70px;
 }
 #addition{
     grid-area: addition;
+    width: 70px;
+    height: 70px;
 }
 #one{
     grid-area: one;
+    width: 70px;
+    height: 70px;
 }
 #two{
     grid-area: two;
+
 }
 #three{
     grid-area: three;
+    width: 70px;
+    height: 70px;
 }
 #equals{
     grid-area: equals;
+    width: 70px;
+    height: 140px;
 }
 #zero{
     grid-area: zero;
+    width: 140px;
+    height: 70px;
 }
 #decimal{
     grid-area: decimal;
+    width: 70px;
+    height: 70px;
+}
+/* buttons 
+    border radius 70%, solid  fresh #4ABDAC
+    color dark grey text clean #DFDCE3 on, orange background vermillion #FC4A1A
+    align center justify center 
+    hover lighter orange sunshine #F78733 */
+button{
+   border-radius: 30%;
+   border: solid 1px #F78733;
+    background-color: #FC4A1A;
+    color: #DFDCE3;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 5px;
 }
