@@ -168,7 +168,8 @@ padding:5px;
 }
 /* buttons 
     border radius 70%, solid  fresh #4ABDAC
-    color dark grey text clean #DFDCE3 on, orange background vermillion #FC4A1A
+    color dark grey text clean #DFDCE3 on, 
+    orange background vermillion #FC4A1A
     align center justify center 
     hover lighter orange sunshine #F78733 */
 button{
@@ -179,4 +180,8 @@ button{
     font-weight: bolder;
     font-size: 20px;
     padding: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #F78733;
 }
