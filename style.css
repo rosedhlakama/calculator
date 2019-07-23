@@ -1,0 +1,103 @@
+/* 
+css
+ page colour white
+ display - white with black text
+ buttons 
+    border radius 70%, solid  fresh #4ABDAC
+    color dark grey text clean #DFDCE3 on, orange background vermillion #FC4A1A
+    align center justify center 
+    hover lighter orange sunshine #F78733
+ */
+body{
+background-color: white;
+font-family: 'PT Serif', serif;
+}
+#heading{
+    align-content: center;
+    margin: auto;
+    color: #DFDCE3;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+/* grid set-up */
+#gridCalculator{
+display: grid;
+width: 200px;
+height: 310px;
+grid-template-columns: [c0]50px [c1]50px [c2]50px [c3]50px [cend];
+grid-template-rows: [r0]25px [r1]25px [r2]25px [r3]25px [r4]25px [r5]25px 
+                    [r6]25px [r7]25px [r8]25px [r9]25px  [r10]25px [r11]25px 
+                    [rend]; 
+grid-template-areas: 
+   "display display display display"
+    "display display display display"
+    "allClear Delete division multiply"
+    "allClear Delete division multiply"
+    "seven eight nine subtract"
+    "seven eight nine subtract"
+    "four five six addition"
+    "four five six addition"
+    "one two three equals"
+    "one two three equals"
+    "zero zero decimal equals"
+    "zero zero decimal equals"
+}
+
+#display{
+    grid-area: display;
+}
+#allClear{
+    grid-area:allClear
+}
+#delete{
+    grid-area:delete;
+}
+#division{
+    grid-area:division;
+}
+#multiply{
+    grid-area: multiply;
+}
+#seven{
+    grid-area: seven;
+}
+#eight{
+    grid-area: eight;
+}
+#nine{
+    grid-area: nine;
+}
+#subtract{
+    grid-area: subtract;
+}
+#four{
+    grid-area: four;
+}
+#five{
+    grid-area: five;
+}
+#six{
+    grid-area: six;
+}
+#addition{
+    grid-area: addition;
+}
+#one{
+    grid-area: one;
+}
+#two{
+    grid-area: two;
+}
+#three{
+    grid-area: three;
+}
+#equals{
+    grid-area: equals;
+}
+#zero{
+    grid-area: zero;
+}
+#decimal{
+    grid-area: decimal;
+}
