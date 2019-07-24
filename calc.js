@@ -1,67 +1,67 @@
 // create class for display function
 class Abacus{
     constructor(entryText, answerText){
-        this.entryText = entryText
-        this.answerText = answerText
-        this.clear()
+        this.entryText = entryText;
+        this.answerText = answerText;
+        this.clear();
     }
 // function so that the clear button clears the displays
     clear(){
-    this.entry = ""
-    this.answer = "0"
-    this.operation = ""
+    this.answer = "0";
+    this.entry = "";
+    this.operation = "";
     }
 // function to splice or pop one last elemet from entry array or string
     delete(){
-        this.entry = this.entry.toString().slice(0, -1)
-    
+        this.answer = this.answer.toString().slice(0, -1);    
     };
-// function for event finder click on buttons to display number
+// function displaying the entries
     displayNumber(number){
-        if(number ===(".") && this.entry.includes(".")) return
-    this.entry = this.entry.toString() + number.toString()
+        if(number ===(".") && this.answer.includes(".")) return;
+    this.answer = this.answer.toString() + number.toString();
     }
-// function to display operands
+// function to limit usage of operands
     selectedOperand(operation){
-        if(this.entry === "")return
-        if(this.answer !== ""){
+        if(this.answer === "")return;
+        if(this.entry !== ""){
             this.calculate()
         }
-    this.operation = operation
-    this.answer = this.entry
-    this.entry = ""       
+    this.operation = operation;
+    this.entry = this.answer;
+    this.answer = "";      
     }
 // evaluate function to do the math
     calculate() {
     let calculation                         // new variant for computation of entries
-    const prev = parseFloat(this.entry)
-    const current = parseFloat(this.answer)
-    if(isNaN(prev)|| isNan(current))return      // if not a number stop function
+    const Z = parseFloat(this.entry);         // take entrered caulculation as z "operand" y
+    const Y = parseFloat(this.answer);      //ParseFloat converts a string of numbers into maths and intergers
+    if(isNaN(Z)|| isNaN(Y))return;      // if not a number stop function
     switch(this.operation){
         case "+":
-            calculation = prev + current
-            break
+            calculation = Z+Y
+            break;
          case "-":
-            calculation= prev - current
-            break
+            calculation = Z-Y
+            break;
          case "x":
-            calculation = prev * current
-            break
+            calculation = Z*Y
+            break;
           case "÷":
-            calculation = prev / current
-            break
+            calculation = Z/Y
+            break;
           default:
-            return  // if no smbols match then stop function
+            return;                         // if no operands match then stop function
     }
-    this.answer = calculation
-    this.operation = undefined
-    this.entry = ""
+    this.answer = calculation;
+    this.operation = undefined;
+    this.entry = "";
     };
 
-  getDisplayNumber(number) {
+// got help from goole on this - to get the commas for the larger numbers
+  getDisplayNumber(number){
         const stringNumber = number.toString()
         const integerDigits = parseFloat(stringNumber.split('.')[0])
-        const decimal = stringNumber.split('.')[1]
+        const decimalDigits = stringNumber.split('.')[1]
         let integerDisplay
         if (isNaN(integerDigits)) {
           integerDisplay = ''
@@ -74,25 +74,25 @@ class Abacus{
           return integerDisplay
         }
   }
+
 // update display each time
     updateDisplay(){
-    this.entryText.innerText = this.entry
-    if(this.entry != null){
-       this.previousOperandTextElement.innerText =
-        `${this.getDisplayNumber(this.entry)} ${this.operation}`
-    } else {
-      this.answer.innerText = ''
-    }
-  }
+        this.answerText.innerText = this.getDisplayNumber(this.answer)
+            if(this.operation != null){
+               this.entryText.innerText =
+                `${this.getDisplayNumber(this.entry)} ${this.operation}`
+            } else {
+              this.entryText.innerText = ''
+            }
+      }
 }
 
-// define variants numericals, operands, clear, equals, entry, answer
+// define variants numericals, operands, clear, equals, entryText, answerText
 const numericals = document.querySelectorAll('[data-numerical]')
 const operands = document.querySelectorAll('[data-operand]')
 const clearAll = document.querySelector('[data-allClear]')
-const Delete = document.querySelector('[data-delete]')
+const deleteButton = document.querySelector('[data-delete]')
 const equals = document.querySelector('[data-equals]')
-const decimal = document.querySelector('[data-decimal]')
 const entryText = document.querySelector('[data-entry]')
 const answerText = document.querySelector('[data-answer]')
 
@@ -117,7 +117,7 @@ numericals.forEach(button =>{
 // event listener for operands
 
 operands.forEach(button =>{
-    button.addEventListener('click', (e) =>{
+    button.addEventListener("click", () => {
         abacus.selectedOperand(button.innerText)
         abacus.updateDisplay()
     })
@@ -133,7 +133,7 @@ allClear.addEventListener("click", button =>{
     abacus.updateDisplay()
 })
 
-Delete.addEventListener("click", button =>{
+deleteButton.addEventListener("click", button =>{
     abacus.delete()
     abacus.updateDisplay()
 })
