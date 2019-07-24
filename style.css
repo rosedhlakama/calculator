@@ -51,6 +51,7 @@ grid-column-gap: 1px;
 grid-row-gap: 1.5px;
 border: solid 0.5px #DFDCE3;
 padding:5px;
+background-color:#FC4A1A; 
 
 }
 
@@ -61,7 +62,7 @@ padding:5px;
     background-color: fresh #4ABDAC;    
     align-self: center;
     margin: auto;
-    color: rgb(162, 157, 168);
+    color: #DFDCE3;
 }
 #entry{
     border-bottom: dashed 1px rgb(73, 207, 187);
@@ -70,6 +71,7 @@ padding:5px;
     margin: 0;
     font-weight: lighter;
     font-size: 20px;
+    color: #DFDCE3;
 }
 #answer{
     text-align: right;
@@ -84,25 +86,38 @@ padding:5px;
     grid-area:allClear;
     width: 70px;
     height: 70px;
-   
+    border-radius: 50%;
+    background-color: #FC4A1A;;
+    border: solid 2px #F78733; 
 }
+#allClear:hover{border: solid 2px #DFDCE3}
 #delete{
     grid-area:Delete;
     width: 70px;
     height: 70px;
-   
+    border-radius: 50%;
+    background-color:  #FC4A1A;;
+    border: solid 2px #F78733; 
 }
+#delete:hover{border: solid 2px #DFDCE3}
 #division{
     grid-area:division;
     width: 70px;
     height: 70px;
-    
+    border-radius: 50%;
+    background-color:  #FC4A1A;;
+    border: solid 2px #F78733; 
 }
+#division:hover{border: solid 2px #DFDCE3}
 #multiply{
     grid-area: multiply;
     width: 70px;
     height: 70px;
+    border-radius: 50%;
+    background-color:  #FC4A1A;
+    border: solid 2px #F78733; 
 }
+#multiply:hover{border: solid 2px #DFDCE3}
 #seven{
     grid-area: seven;
     width: 70px;
@@ -122,7 +137,11 @@ padding:5px;
     grid-area: subtract;
     width: 70px;
     height: 70px;
+    border-radius: 50%;
+    background-color:  #FC4A1A;
+    border: solid 2px #F78733; 
 }
+#subtract:hover{border: solid 2px #DFDCE3}
 #four{
     grid-area: four;
     width: 70px;
@@ -142,7 +161,11 @@ padding:5px;
     grid-area: addition;
     width: 70px;
     height: 70px;
+    border-radius: 50%;
+    background-color:  #FC4A1A;
+    border: solid 2px #F78733; 
 }
+#addition:hover{border: solid 2px #DFDCE3}
 #one{
     grid-area: one;
     width: 70px;
@@ -150,6 +173,8 @@ padding:5px;
 }
 #two{
     grid-area: two;
+    width: 70px;
+    height: 70px;
 
 }
 #three{
@@ -161,16 +186,21 @@ padding:5px;
     grid-area: equals;
     width: 70px;
     height: 140px;
-}
+    background-color:  #FC4A1A;
+    border-radius: 50%;
+    border: solid 2px #F78733; 
+    }
+    #equals:hover{border: solid 2px #DFDCE3 }
 #zero{
     grid-area: zero;
-    width: 140px;
+    width: 145px;
     height: 70px;
 }
 #decimal{
     grid-area: decimal;
     width: 70px;
     height: 70px;
+         
 }
 /* buttons 
     border radius 70%, solid  fresh #4ABDAC
@@ -179,15 +209,14 @@ padding:5px;
     align center justify center 
     hover lighter orange sunshine #F78733 */
 button{
-   border-radius: 30%;
-   border: solid 1px #F78733;
-    background-color: #FC4A1A;
+    border: solid 0.05px #F78733;    
     color: #DFDCE3;
     font-weight: bolder;
     font-size: 20px;
     padding: 5px;
     cursor: pointer;
+    background-color:#FC4A1A; 
 }
 button:hover{
-    background-color: #F78733;
+   border: solid 0.5px #DFDCE3;
 }
