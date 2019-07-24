@@ -61,18 +61,24 @@ padding:5px;
     background-color: fresh #4ABDAC;    
     align-self: center;
     margin: auto;
+    color: rgb(162, 157, 168);
 }
 #entry{
     border-bottom: dashed 1px rgb(73, 207, 187);
     text-align: right;
     height: 35px;
     margin: 0;
+    font-weight: lighter;
+    font-size: 20px;
 }
 #answer{
     text-align: right;
     height: 30px;
-    margin: 0 0 0 0;
+    margin: 0;
     border-bottom: dashed 1px rgb(73, 207, 187);
+    font-weight: bold;
+    font-size: 25px;
+
 }
 #allClear{
     grid-area:allClear;
