@@ -52,9 +52,9 @@ class Abacus{
           default:
             return;                         // if no operands match then stop function
     }
+    this.entry = "";   
     this.answer = calculation;
-    this.operation = undefined;
-    this.entry = "";
+    this.operation = undefined;             
     };
 
 // got help from goole on this - to get the commas for the larger numbers
@@ -78,10 +78,11 @@ class Abacus{
 // update display each time
     updateDisplay(){
         this.answerText.innerText = this.getDisplayNumber(this.answer)
-            if(this.operation != null){
+        if(this.operation != null){
                this.entryText.innerText =
                 `${this.getDisplayNumber(this.entry)} ${this.operation}`
-            } else {
+            } 
+            else {
               this.entryText.innerText = ''
             }
       }
@@ -114,7 +115,7 @@ numericals.forEach(button =>{
     })
 })
 
-// event listener for operands
+// event listeners for buttons
 
 operands.forEach(button =>{
     button.addEventListener("click", () => {
