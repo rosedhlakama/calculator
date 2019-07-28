@@ -1,0 +1,222 @@
+/* 
+css
+ page colour white
+ display - white with black text
+ buttons 
+    border radius 70%, solid  fresh #4ABDAC
+    color dark grey text clean #DFDCE3 on, orange background vermillion #FC4A1A
+    align center justify center 
+    hover lighter orange sunshine #F78733
+ */
+body{
+background-color: white;
+font-family: 'PT Serif', serif;
+}
+#heading{
+    align-content: center;
+   text-align: center;
+    margin: auto;
+    color: #DFDCE3;
+    text-transform: uppercase;
+    font-size: 20px;
+
+}
+
+/* grid set-up */
+#gridCalculator{
+display: grid;
+width: 300px;
+height: 450px;
+margin: auto;
+align-content: center;
+justify-content: center;
+grid-template-columns: [c0]75px [c1]75px [c2]75px [c3]75px [cend];
+grid-template-rows: [r0]35px [r1]35px [r2]35px [r3]35px [r4]35px [r5]35px 
+                    [r6]35px [r7]35px [r8]35px [r9]35px  [r10]35px [r11]35px 
+                    [rend]; 
+grid-template-areas: 
+   "display display display display"
+    "display display display display"
+    "allClear Delete division multiply"
+    "allClear Delete division multiply"
+    "seven eight nine subtract"
+    "seven eight nine subtract"
+    "four five six addition"
+    "four five six addition"
+    "one two three equals"
+    "one two three equals"
+    "zero zero decimal equals"
+    "zero zero decimal equals";
+grid-column-gap: 1px;
+grid-row-gap: 1.5px;
+border: solid 0.5px #DFDCE3;
+padding:5px;
+background-color:#FC4A1A; 
+
+}
+
+#display{
+    grid-area: display;
+    width: 280px;
+    height: 70px;
+    background-color: fresh #4ABDAC;    
+    align-self: center;
+    margin: auto;
+    color: #DFDCE3;
+}
+#entry{
+    border-bottom: dashed 1px rgb(73, 207, 187);
+    text-align: right;
+    height: 35px;
+    margin: 0;
+    font-weight: lighter;
+    font-size: 20px;
+    color: #DFDCE3;
+}
+#answer{
+    text-align: right;
+    height: 30px;
+    margin: 0;
+    border-bottom: dashed 1px rgb(73, 207, 187);
+    font-weight: bold;
+    font-size: 25px;
+
+}
+#allClear{
+    grid-area:allClear;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #FC4A1A;;
+    border: solid 2px #F78733; 
+}
+#allClear:hover{border: solid 2px #DFDCE3}
+#delete{
+    grid-area:Delete;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color:  #FC4A1A;;
+    border: solid 2px #F78733; 
+}
+#delete:hover{border: solid 2px #DFDCE3}
+#division{
+    grid-area:division;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color:  #FC4A1A;;
+    border: solid 2px #F78733; 
+}
+#division:hover{border: solid 2px #DFDCE3}
+#multiply{
+    grid-area: multiply;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color:  #FC4A1A;
+    border: solid 2px #F78733; 
+}
+#multiply:hover{border: solid 2px #DFDCE3}
+#seven{
+    grid-area: seven;
+    width: 70px;
+    height: 70px;
+}
+#eight{
+    grid-area: eight;
+    width: 70px;
+    height: 70px;
+}
+#nine{
+    grid-area: nine;
+    width: 70px;
+    height: 70px;
+}
+#subtract{
+    grid-area: subtract;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color:  #FC4A1A;
+    border: solid 2px #F78733; 
+}
+#subtract:hover{border: solid 2px #DFDCE3}
+#four{
+    grid-area: four;
+    width: 70px;
+    height: 70px;
+}
+#five{
+    grid-area: five;
+    width: 70px;
+    height: 70px;
+}
+#six{
+    grid-area: six;
+    width: 70px;
+    height: 70px;
+}
+#addition{
+    grid-area: addition;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color:  #FC4A1A;
+    border: solid 2px #F78733; 
+}
+#addition:hover{border: solid 2px #DFDCE3}
+#one{
+    grid-area: one;
+    width: 70px;
+    height: 70px;
+}
+#two{
+    grid-area: two;
+    width: 70px;
+    height: 70px;
+
+}
+#three{
+    grid-area: three;
+    width: 70px;
+    height: 70px;
+}
+#equals{
+    grid-area: equals;
+    width: 70px;
+    height: 140px;
+    background-color:  #FC4A1A;
+    border-radius: 50%;
+    border: solid 2px #F78733; 
+    }
+    #equals:hover{border: solid 2px #DFDCE3 }
+#zero{
+    grid-area: zero;
+    width: 145px;
+    height: 70px;
+}
+#decimal{
+    grid-area: decimal;
+    width: 70px;
+    height: 70px;
+         
+}
+/* buttons 
+    border radius 70%, solid  fresh #4ABDAC
+    color dark grey text clean #DFDCE3 on, 
+    orange background vermillion #FC4A1A
+    align center justify center 
+    hover lighter orange sunshine #F78733 */
+button{
+    border: solid 0.05px #F78733;    
+    color: #DFDCE3;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    background-color:#FC4A1A; 
+}
+button:hover{
+   border: solid 0.5px #DFDCE3;
+}
